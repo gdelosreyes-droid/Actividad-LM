@@ -27,8 +27,29 @@
             margin-top: 10px;
             margin-bottom: 20px;
         }
+        /* Estilos generales para los botones */
         .button-container input[type="button"] {
             margin-right: 10px;
+            padding: 5px 15px;
+            border: none;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        /* Botón de suma */
+        #btnSuma {
+            background-color: green;
+        }
+        #btnSuma:hover {
+            background-color: darkgreen;
+        }
+        /* Botón de resta */
+        #btnResta {
+            background-color: red;
+        }
+        #btnResta:hover {
+            background-color: darkred;
         }
         #resultado {
             font-weight: bold;
@@ -52,8 +73,8 @@
                 <input type="text" id="num2">
             </div>
             <div class="button-container">
-                <input type="button" value="Calcular suma" onclick="calcularSuma()">
-                <input type="button" value="Calcular resta" onclick="calcularResta()">
+                <input type="button" id="btnSuma" value="Calcular suma" onclick="calcularSuma()">
+                <input type="button" id="btnResta" value="Calcular resta" onclick="calcularResta()">
             </div>
         </form>
 
