@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Suma y Resta de dos números</title>
+    <title>Suma, Resta y Multiplicación de dos números</title>
     <style>
         .container {
             text-align: center;
@@ -27,7 +27,6 @@
             margin-top: 10px;
             margin-bottom: 20px;
         }
-        /* Estilos generales para los botones */
         .button-container input[type="button"] {
             margin-right: 10px;
             padding: 5px 15px;
@@ -37,19 +36,23 @@
             cursor: pointer;
             border-radius: 5px;
         }
-        /* Botón de suma */
         #btnSuma {
             background-color: green;
         }
         #btnSuma:hover {
             background-color: darkgreen;
         }
-        /* Botón de resta */
         #btnResta {
             background-color: red;
         }
         #btnResta:hover {
             background-color: darkred;
+        }
+        #btnMultiplica {
+            background-color: blue;
+        }
+        #btnMultiplica:hover {
+            background-color: darkblue;
         }
         #resultado {
             font-weight: bold;
@@ -61,7 +64,7 @@
 
 <div class="container">
     <div class="content">
-        <h2>Suma y Resta de dos números</h2>
+        <h2>Suma, Resta y Multiplicación</h2>
 
         <form>
             <div class="input-container">
@@ -75,6 +78,7 @@
             <div class="button-container">
                 <input type="button" id="btnSuma" value="Calcular suma" onclick="calcularSuma()">
                 <input type="button" id="btnResta" value="Calcular resta" onclick="calcularResta()">
+                <input type="button" id="btnMultiplica" value="Calcular multiplicación" onclick="calcularMultiplicacion()">
             </div>
         </form>
 
@@ -88,10 +92,11 @@ function calcularSuma() {
     var num2 = parseFloat(document.getElementById("num2").value);
 
     if (!isNaN(num1) && !isNaN(num2)) {
-        var suma = num1 + num2;
-        document.getElementById("resultado").innerHTML = "El resultado de la suma es: " + suma;
+        document.getElementById("resultado").innerHTML =
+            "El resultado de la suma es: " + (num1 + num2);
     } else {
-        document.getElementById("resultado").innerHTML = "Por favor, ingrese dos números válidos.";
+        document.getElementById("resultado").innerHTML =
+            "Por favor, ingrese dos números válidos.";
     }
 }
 
@@ -100,10 +105,24 @@ function calcularResta() {
     var num2 = parseFloat(document.getElementById("num2").value);
 
     if (!isNaN(num1) && !isNaN(num2)) {
-        var resta = num1 - num2;
-        document.getElementById("resultado").innerHTML = "El resultado de la resta es: " + resta;
+        document.getElementById("resultado").innerHTML =
+            "El resultado de la resta es: " + (num1 - num2);
     } else {
-        document.getElementById("resultado").innerHTML = "Por favor, ingrese dos números válidos.";
+        document.getElementById("resultado").innerHTML =
+            "Por favor, ingrese dos números válidos.";
+    }
+}
+
+function calcularMultiplicacion() {
+    var num1 = parseFloat(document.getElementById("num1").value);
+    var num2 = parseFloat(document.getElementById("num2").value);
+
+    if (!isNaN(num1) && !isNaN(num2)) {
+        document.getElementById("resultado").innerHTML =
+            "El resultado de la multiplicación es: " + (num1 * num2);
+    } else {
+        document.getElementById("resultado").innerHTML =
+            "Por favor, ingrese dos números válidos.";
     }
 }
 </script>
